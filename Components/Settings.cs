@@ -5,10 +5,12 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using gredis.Utils;
 using NLog;
+using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 
 namespace gredis.Components;
 
-public class Settings {
+public class Settings : ReactiveObject {
 
     private static readonly Logger Log = LogManager.GetCurrentClassLogger();
 
@@ -53,8 +55,9 @@ public class Settings {
     }
 
 
-    public class ConfigC {
+    public class ConfigC : ReactiveObject {
 
+        [Reactive]
         public string Theme { get; set; }
 
         public string Version { get; set; }

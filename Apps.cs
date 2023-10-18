@@ -29,10 +29,13 @@ public class Apps {
         }
     }
 
-    public static void buildServiceProvider() {
+    private static void buildServiceProvider() {
         ServiceCollection co = new();
 
         co.AddSingleton<Settings>();
+
+        co.AddSingleton<HomeViewModel>();
+        co.AddSingleton<SettingViewModel>();
 
         co.AddSingleton<MainViewModel>();
         co.AddSingleton<MainWindowViewModel>();

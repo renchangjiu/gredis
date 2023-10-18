@@ -1,0 +1,27 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:gredis.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="31"
+             x:Class="gredis.Controls.TitleBar">
+
+    <Border Height="31"
+            IsHitTestVisible="False"
+            PointerPressed="OnPointerPressed">
+        <DockPanel>
+            <Image Source="/Assets/logo.png"
+                   Height="24"
+                   Margin="10 0 0 0" />
+            <TextBlock
+                Text="{StaticResource appName}"
+                Margin="10 0 0 0"
+                FontSize="20"
+                FontWeight="Bold"
+                VerticalAlignment="Center" />
+            <TextBlock Text="指示当前redis连接"
+                       VerticalAlignment="Center" HorizontalAlignment="Center">
+            </TextBlock>
+        </DockPanel>
+    </Border>
+</UserControl>

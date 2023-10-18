@@ -8,8 +8,8 @@
         x:Class="gredis.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         ExtendClientAreaToDecorationsHint="True"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="gredis">
+        Icon="/Assets/logo.png"
+        Title="{StaticResource appName}">
 
     <Design.DataContext>
         <vm:MainWindowViewModel />
