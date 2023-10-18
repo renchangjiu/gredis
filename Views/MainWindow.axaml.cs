@@ -22,7 +22,7 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel> {
             .Subscribe(t => {
                 Application.Current.RequestedThemeVariant = CommonUtils.GetThemeVariant(t);
             });
-        Assets.Resources.Culture = new CultureInfo("zh_CN");
+        // Assets.Resources.Culture = new CultureInfo("zh_CN");
 
     }
 

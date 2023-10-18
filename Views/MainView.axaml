@@ -16,10 +16,12 @@
     </Design.DataContext>
 
     <Grid RowDefinitions="Auto *">
-        <TextBlock Text="ss"></TextBlock>
+
         <co:TitleBar Grid.Row="0" />
+
         <ui:NavigationView Grid.Row="1"
                            x:Name="nvSample"
+                           Content="{Binding ContentPage}"
                            SelectionChanged="NvSample_OnSelectionChanged"
                            OpenPaneLength="200"
                            IsSettingsVisible="False"

@@ -1,8 +1,4 @@
 ﻿using System;
-using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Media;
-using Avalonia.Media.Imaging;
 using Avalonia.ReactiveUI;
 using Avalonia.Styling;
 using FluentAvalonia.UI.Controls;
@@ -19,9 +15,9 @@ public partial class MainView : ReactiveUserControl<MainViewModel> {
 
     public MainView() {
         InitializeComponent();
+
         DataContext = Apps.getService<MainViewModel>();
         settings = Apps.getService<Settings>();
-        nvSample.Content = new SettingViewModel();
         this.WhenAnyValue(v => v.settings.Config.Theme)
             .Subscribe(theme => {
                 ImageIconSource source = new();
@@ -37,15 +33,16 @@ public partial class MainView : ReactiveUserControl<MainViewModel> {
         string content = (string)item.Content!;
         switch (content) {
             case "Home":
+                ViewModel.SwitchContentPage(Apps.getService<HomeViewModel>());
                 break;
             case "Source":
                 CommonUtils.OpenBrowser("https://github.com/renchangjiu/gredis");
                 break;
             case "Setting":
+                ViewModel.SwitchContentPage(Apps.getService<SettingViewModel>());
                 break;
         }
 
-        Console.WriteLine("");
     }
 
 }
