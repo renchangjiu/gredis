@@ -1,17 +1,19 @@
-.eunit
-*.o
-*.beam
-*.plt
-erl_crash.dump
-.concrete/DEV_MODE
+### IntelliJ IDEA ###
+.idea
+.rider
+*.iws
+*.iml
+*.ipr
 
-# rebar 2.x
-.rebar
-rel/example_project
-ebin/*.beam
-deps
+.vs
+*.user
 
-# rebar 3
-.rebar3
-_build/
-_checkouts/
+### C# ###
+[Dd]ebug
+[Rr]elease
+obj/
+[Bb]in
+!packages/build/
+Bak/
+packages/
+[Rr]elease/
