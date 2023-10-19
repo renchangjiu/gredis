@@ -49,15 +49,9 @@
 
                     </StackPanel>
                 </Grid>
-
-                <Border BorderBrush="Red" BorderThickness="1">
-
-                    <TextBlock
-                        FontFamily="avares://gredis/Assets#Material"
-                               Text="&#xe037;"
-                               FontWeight="Bold"
-                               FontSize="40" Foreground="Red" />
-                </Border>
+                <Button>
+                    <PathIcon Data="{StaticResource pi}" Foreground="{DynamicResource ForegroundBrush}"></PathIcon>
+                </Button>
 
             </StackPanel>
         </ScrollViewer>
