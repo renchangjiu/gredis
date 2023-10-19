@@ -41,6 +41,9 @@ public class Apps {
         co.AddSingleton<HomeViewModel>();
         co.AddSingleton<SettingViewModel>();
 
+        co.AddSingleton<HomeSideBarViewModel>();
+        co.AddSingleton<HomeContentViewModel>();
+
         co.AddSingleton<MainViewModel>();
         co.AddSingleton<MainWindowViewModel>();
 

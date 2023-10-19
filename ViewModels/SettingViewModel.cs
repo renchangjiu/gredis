@@ -19,7 +19,7 @@ public class SettingViewModel : ViewModelBase {
         Settings = Apps.getService<Settings>();
         ThemeItems.Add(new ThemeItem("Dark"));
         ThemeItems.Add(new ThemeItem("Light"));
-        ThemeItems.Add(new ThemeItem("Default"));
+        // ThemeItems.Add(new ThemeItem("Default"));
 
         SelectedThemeItem = ThemeItems.Find(item => item.Name == Settings.Config.Theme)!;
 

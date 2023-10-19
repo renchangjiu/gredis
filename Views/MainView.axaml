@@ -21,12 +21,11 @@
         <co:TitleBar Grid.Row="0" />
 
         <ui:NavigationView Grid.Row="1"
-                           x:Name="nvSample"
                            Content="{Binding ContentPage}"
                            SelectedItem="{Binding SelectedItem}"
                            MenuItemsSource="{Binding NavItems}"
                            FooterMenuItemsSource="{Binding NavItemsFooter}"
-                           OpenPaneLength="200"
+                           OpenPaneLength="125"
                            IsSettingsVisible="False"
                            PaneDisplayMode="Left">
 

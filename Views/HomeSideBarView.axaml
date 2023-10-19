@@ -1,0 +1,65 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ui="using:FluentAvalonia.UI.Controls"
+             xmlns:vm="using:gredis.ViewModels"
+             xmlns:co="using:gredis.Controls"
+             x:DataType="vm:HomeSideBarViewModel"
+             mc:Ignorable="d" d:DesignWidth="230" d:DesignHeight="450"
+             x:Class="gredis.Views.HomeSideBarView">
+    <Design.DataContext>
+        <vm:HomeSideBarViewModel />
+    </Design.DataContext>
+
+    <UserControl.Resources>
+        <x:Double x:Key="CommandBarButtonWidth">30</x:Double>
+    </UserControl.Resources>
+
+    <UserControl.Styles>
+        <Style Selector="ui|CommandBarButton">
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Width" Value="30" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+    </UserControl.Styles>
+
+    <Border>
+        <ScrollViewer>
+            <StackPanel>
+                <Grid
+                    Background="#595c5d"
+                    Height="30">
+                    <TextBlock
+                        Text="Connection"
+                        Margin="2" />
+                    <StackPanel Orientation="Horizontal"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Right"
+                                Background="#595c5d"
+                                Margin="0 0 0 0">
+
+
+                        <ui:CommandBarButton IconSource="Add" ToolTip.Tip="New" FontSize="1" />
+                        <ui:CommandBarButton IconSource="Refresh" ToolTip.Tip="Refresh" />
+                        <ui:CommandBarButton IconSource="ChevronUp" ToolTip.Tip="Expand All" />
+                        <ui:CommandBarButton IconSource="ChevronDown" ToolTip.Tip="Collapse All" />
+                        <ui:CommandBarButton IconSource="Remove" ToolTip.Tip="Hide" />
+
+                    </StackPanel>
+                </Grid>
+
+                <Border BorderBrush="Red" BorderThickness="1">
+
+                    <TextBlock
+                        FontFamily="avares://gredis/Assets#Material"
+                               Text="&#xe037;"
+                               FontWeight="Bold"
+                               FontSize="40" Foreground="Red" />
+                </Border>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Border>
+</UserControl>

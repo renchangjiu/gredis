@@ -12,13 +12,22 @@
         <vm:SettingViewModel />
     </Design.DataContext>
 
-    <Border>
+    <Border Margin="10">
         <StackPanel>
-            <ui:FAComboBox
-                DisplayMemberBinding="{Binding Name, DataType=vm:ThemeItem}"
-                SelectedItem="{Binding SelectedThemeItem}"
-                ItemsSource="{Binding ThemeItems}">
-            </ui:FAComboBox>
+            <ui:SettingsExpander Header="App Theme"
+                                 IconSource="DarkTheme"
+                                 Description="Change the current app theme">
+
+                <ui:SettingsExpander.Footer>
+                    <ui:FAComboBox
+                        MinWidth="150"
+                        DisplayMemberBinding="{Binding Name, DataType=vm:ThemeItem}"
+                        SelectedItem="{Binding SelectedThemeItem}"
+                        ItemsSource="{Binding ThemeItems}" />
+                </ui:SettingsExpander.Footer>
+
+            </ui:SettingsExpander>
+
         </StackPanel>
     </Border>
 </UserControl>
