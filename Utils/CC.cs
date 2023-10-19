@@ -9,4 +9,8 @@ public static class CC {
         Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
     };
 
+    public const string GithubRepoPath = "https://github.com/renchangjiu/gredis";
+
+    public const string Version = "0.0.1";
+
 }

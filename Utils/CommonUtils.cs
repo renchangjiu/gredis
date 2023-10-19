@@ -10,12 +10,19 @@ namespace gredis.Utils;
 public static class CommonUtils {
 
     /// <param name="path">like: /Assets/icon.ico</param>
+    public static string concatAssetUri(string path) {
+        return $"avares://gredis{path}";
+    }
+
+
+    /// <param name="path">like: /Assets/icon.ico</param>
     public static Bitmap GetBitmapFromAsset(string path) {
-        Stream fs = AssetLoader.Open(new Uri($"avares://gredis{path}"));
+        Stream fs = AssetLoader.Open(new Uri(concatAssetUri(path)));
         Bitmap ret = new(fs);
         fs.Dispose();
         return ret;
     }
+
 
     public static ThemeVariant GetThemeVariant(string value) {
         switch (value) {
@@ -27,6 +34,7 @@ public static class CommonUtils {
                 return ThemeVariant.Default;
         }
     }
+
     public static void OpenBrowser(string url) {
         Process.Start(new ProcessStartInfo() {
             FileName = url,

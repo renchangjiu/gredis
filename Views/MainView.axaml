@@ -3,9 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ui="using:FluentAvalonia.UI.Controls"
-             xmlns:as="clr-namespace:gredis.Assets"
              xmlns:co="using:gredis.Controls"
              xmlns:vm="using:gredis.ViewModels"
+             xmlns:mo="using:gredis.Models"
              xmlns:view="using:gredis.Views"
              x:DataType="vm:MainViewModel"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="400"
@@ -15,6 +15,7 @@
         <vm:MainViewModel />
     </Design.DataContext>
 
+
     <Grid RowDefinitions="Auto *">
 
         <co:TitleBar Grid.Row="0" />
@@ -22,27 +23,19 @@
         <ui:NavigationView Grid.Row="1"
                            x:Name="nvSample"
                            Content="{Binding ContentPage}"
-                           SelectionChanged="NvSample_OnSelectionChanged"
+                           SelectedItem="{Binding SelectedItem}"
+                           MenuItemsSource="{Binding NavItems}"
+                           FooterMenuItemsSource="{Binding NavItemsFooter}"
                            OpenPaneLength="200"
                            IsSettingsVisible="False"
                            PaneDisplayMode="Left">
 
-            <ui:NavigationView.MenuItems>
-                <ui:NavigationViewItem Content="Home"
-                                       Tag="Home"
-                                       IconSource="Home" />
-            </ui:NavigationView.MenuItems>
+            <ui:NavigationView.MenuItemTemplate>
+                <DataTemplate DataType="{x:Type mo:NavMenuItem}">
+                    <ui:NavigationViewItem Content="{Binding Content}" IconSource="{Binding IconSource}" />
+                </DataTemplate>
+            </ui:NavigationView.MenuItemTemplate>
 
-            <ui:NavigationView.FooterMenuItems>
-                <ui:NavigationViewItem
-                    Name="NavItemGithub"
-                    Content="{x:Static as:Resources.Source}"
-                    Tag="Source"/>
-                <ui:NavigationViewItem
-                    Content="Setting"
-                    Tag="Setting"
-                    IconSource="Setting"/>
-            </ui:NavigationView.FooterMenuItems>
         </ui:NavigationView>
     </Grid>
 </UserControl>

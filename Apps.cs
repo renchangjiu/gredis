@@ -21,6 +21,10 @@ public class Apps {
         return ServiceProvider.GetRequiredService<T>();
     }
 
+    public static object getService(Type type) {
+        return ServiceProvider.GetRequiredService(type);
+    }
+
     public static void init() {
         NLogConfig.init();
         buildServiceProvider();

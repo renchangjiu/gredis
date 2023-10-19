@@ -9,7 +9,6 @@ public class MainWindowViewModel : ViewModelBase {
 
     public MainWindowViewModel() {
         Settings settings = Apps.getService<Settings>();
-        settings.Config.Theme = ThemeVariant.Dark.ToString();
     }
 
 }

@@ -12,11 +12,11 @@
         <DockPanel>
             <Image Source="/Assets/logo.png"
                    Height="24"
-                   Margin="10 0 0 0" />
+                   Margin="15 0 0 0" />
             <TextBlock
                 Text="{StaticResource appName}"
-                Margin="10 0 0 0"
-                FontSize="20"
+                Margin="15 0 0 0"
+                FontSize="16"
                 FontWeight="Bold"
                 VerticalAlignment="Center" />
             <TextBlock Text="指示当前redis连接"
