@@ -10,6 +10,7 @@
         x:Class="gredis.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         ExtendClientAreaToDecorationsHint="True"
+        Background="{DynamicResource BackgroundBrush}"
         Icon="/Assets/logo.png"
         Title="{StaticResource appName}">
 

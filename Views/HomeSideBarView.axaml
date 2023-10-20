@@ -6,6 +6,7 @@
              xmlns:vm="using:gredis.ViewModels"
              xmlns:co="using:gredis.Controls"
              x:DataType="vm:HomeSideBarViewModel"
+             Background="{DynamicResource BackgroundBrush}"
              mc:Ignorable="d" d:DesignWidth="230" d:DesignHeight="450"
              x:Class="gredis.Views.HomeSideBarView">
     <Design.DataContext>
@@ -13,46 +14,66 @@
     </Design.DataContext>
 
     <UserControl.Resources>
-        <x:Double x:Key="CommandBarButtonWidth">30</x:Double>
     </UserControl.Resources>
 
     <UserControl.Styles>
-        <Style Selector="ui|CommandBarButton">
-            <Setter Property="Height" Value="30" />
-            <Setter Property="Width" Value="30" />
-            <Setter Property="Margin" Value="0" />
-            <Setter Property="Padding" Value="0" />
+        <Style Selector="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Padding" Value="3" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+        <Style Selector="PathIcon">
+            <Setter Property="Width" Value="13" />
+            <Setter Property="Height" Value="13" />
         </Style>
     </UserControl.Styles>
 
-    <Border>
+    <Border BorderBrush="{DynamicResource BorderBrush}"
+            BorderThickness="1 0 0 0">
         <ScrollViewer>
             <StackPanel>
-                <Grid
-                    Background="#595c5d"
-                    Height="30">
-                    <TextBlock
-                        Text="Connection"
-                        Margin="2" />
-                    <StackPanel Orientation="Horizontal"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Right"
-                                Background="#595c5d"
-                                Margin="0 0 0 0">
+                <Border BorderBrush="{DynamicResource BorderBrush}"
+                        BorderThickness="0 0 0 1">
+                    <Grid Height="30">
+                        <TextBlock
+                            Text="Connection"
+                            VerticalAlignment="Center"
+                            Margin="5 0 0 0" />
+                        <StackPanel Orientation="Horizontal"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Right"
+                                    Background="{DynamicResource BackgroundBrush}"
+                                    Margin="0 0 0 0">
+                            <Button Command="{Binding HandleNewConn}">
 
-
-                        <ui:CommandBarButton IconSource="Add" ToolTip.Tip="New" FontSize="1" />
-                        <ui:CommandBarButton IconSource="Refresh" ToolTip.Tip="Refresh" />
-                        <ui:CommandBarButton IconSource="ChevronUp" ToolTip.Tip="Expand All" />
-                        <ui:CommandBarButton IconSource="ChevronDown" ToolTip.Tip="Collapse All" />
-                        <ui:CommandBarButton IconSource="Remove" ToolTip.Tip="Hide" />
-
-                    </StackPanel>
-                </Grid>
-                <Button>
-                    <PathIcon Data="{StaticResource pi}" Foreground="{DynamicResource ForegroundBrush}"></PathIcon>
-                </Button>
-
+                                <PathIcon
+                                    Data="{StaticResource Add}"
+                                    ToolTip.Tip="New" />
+                            </Button>
+                            <Button>
+                                <PathIcon
+                                    Data="{StaticResource Refresh}"
+                                    ToolTip.Tip="Refresh" />
+                            </Button>
+                            <Button>
+                                <PathIcon
+                                    Data="{StaticResource Expand}"
+                                    ToolTip.Tip="Expand All" />
+                            </Button>
+                            <Button>
+                                <PathIcon
+                                    Data="{StaticResource Collapse}"
+                                    ToolTip.Tip="Collapse All" />
+                            </Button>
+                            <Button>
+                                <PathIcon
+                                    Data="{StaticResource Remove}"
+                                    ToolTip.Tip="Hide" />
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
             </StackPanel>
         </ScrollViewer>
     </Border>

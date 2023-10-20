@@ -5,6 +5,7 @@
              xmlns:vm="using:gredis.ViewModels"
              xmlns:vi="using:gredis.Views"
              x:DataType="vm:HomeViewModel"
+             Background="{DynamicResource BackgroundBrush}"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="gredis.Views.HomeView">
 

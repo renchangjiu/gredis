@@ -12,7 +12,6 @@
         <Folder Include="Converters\" />
         <Folder Include="Enums\" />
         <AvaloniaResource Include="Assets\**"/>
-        <Folder Include="Styles\" />
     </ItemGroup>
 
 

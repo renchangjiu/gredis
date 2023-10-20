@@ -2,15 +2,28 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:sys="using:System">
     <sys:String x:Key="appName">Gredis</sys:String>
-    <StreamGeometry x:Key="pi">M563.5-203.5V-231q79-29.5 126.75-97.75T738-481q0-83.5-47.75-151.75T563.5-731v-27.5Q652-725 707.75-649.75T763.5-481q0 94-55.75 169.25T563.5-203.5ZM196.5-415v-130H324l122-122v374L324-415H196.5Zm367 57v-245.5q30 21.5 45.5 54.25T624.5-480q0 37-16 68.75t-45 53.25Zm-143-247.5-85.5 86H222v79h113l85.5 85.5v-250.5Zm-99 125.5Z</StreamGeometry>
+    <StreamGeometry x:Key=""></StreamGeometry>
+    <StreamGeometry x:Key="Remove">M289-473v-15h382v15H289Z</StreamGeometry>
+    <StreamGeometry x:Key="Collapse">m290.5-135.5-12.5-12 202-203 202 203-12.5 12L480-324 290.5-135.5Zm189.5-474-202-203 12.5-12.5L480-636.5 669.5-825l12.5 12.5-202 203Z</StreamGeometry>
+    <StreamGeometry x:Key="Expand">M223-153v-16.5h514v16.5H223Zm257.5-107.5L374.5-366l13-13.5 84 86.5v-375l-84 86.5-13-13.5 106-105.5 105 105.5-13.5 13.5-83-85.5v373l83-85.5 13.5 13.5-105 105.5ZM223-791v-16h514v16H223Z</StreamGeometry>
+    <StreamGeometry x:Key="Refresh">M484.433-248.5q-96.808 0-164.371-67.557Q252.5-383.615 252.5-479.923t67.562-163.943Q387.625-711.5 484.5-711.5q67.5 0 121.5 34t84.5 89v-123H708V-569H565.5v-17.5H668q-28.032-49.033-76.222-78.267Q543.589-694 484.539-694 395-694 332.5-631.382q-62.5 62.617-62.5 151.5Q270-391 332.375-328.5T484.331-266q83.298 0 142.734-55 59.435-55 68.623-135.5H713q-6.5 89-71.99 148.5-65.491 59.5-156.577 59.5Z</StreamGeometry>
+    <StreamGeometry x:Key="Add">M472.5-473H297v-15h175.5v-175.5h15V-488H663v15H487.5v175.5h-15V-473Z</StreamGeometry>
 
 
     <ResourceDictionary.ThemeDictionaries>
         <ResourceDictionary x:Key='Light'>
             <SolidColorBrush x:Key='ForegroundBrush'>Black</SolidColorBrush>
+            <SolidColorBrush x:Key='BackgroundBrush'>White</SolidColorBrush>
+            <SolidColorBrush x:Key='BorderBrush'>Red</SolidColorBrush>
+            <SolidColorBrush x:Key='TitleBarBrush'>#3C3F41</SolidColorBrush>
+            <SolidColorBrush x:Key='PrimaryButtonBackgroundBrush'>#365880</SolidColorBrush>
         </ResourceDictionary>
         <ResourceDictionary x:Key='Dark'>
             <SolidColorBrush x:Key='ForegroundBrush'>White</SolidColorBrush>
+            <SolidColorBrush x:Key='BackgroundBrush'>#595C5D</SolidColorBrush>
+            <SolidColorBrush x:Key='BorderBrush'>#323232</SolidColorBrush>
+            <SolidColorBrush x:Key='TitleBarBrush'>#3C3F41</SolidColorBrush>
+            <SolidColorBrush x:Key='PrimaryButtonBackgroundBrush'>#365880</SolidColorBrush>
         </ResourceDictionary>
     </ResourceDictionary.ThemeDictionaries>
 </ResourceDictionary>

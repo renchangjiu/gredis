@@ -3,12 +3,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="using:gredis.ViewModels"
+             x:DataType="vm:ConnAddViewModel"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="gredis.Controls.MyButton"
-             Name="ThisParent"
-             >
-
-    <Button
-        Name="ThisButton"
-        />
+             x:Class="gredis.Views.ConnAddView">
+    <Design.DataContext>
+        <vm:ConnAddViewModel />
+    </Design.DataContext>
+    ConnAddView
 </UserControl>
